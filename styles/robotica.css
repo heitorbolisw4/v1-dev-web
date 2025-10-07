@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color:var(--color-6) ;
+  color: #333333;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.primeira-secao {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+@charset "UTF-8";
+
+/* Aqui estou inportando as fontes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Aqui estou definindo as variaveis que são padrões "Padrões" para mantermos uuma uniformidade dentre as quatro paginas */
+:root {
+  /* Paleta de cores */
+
+  --color-1: #2e38f2; /* Azul Vibrante */
+  --color-2: #3037bf; /* Azul Médio */
+  --color-3: #32408c; /* Azul Profundo */
+  --color-4: #b4b9d9; /* Cinza Azulado */
+  --color-5: #333640; /* Cinza Escuro */
+  --color-6: #dadada; /* Platnum "Color adc "*/
+
+  /* Tipografia */
+  --font-sans-1: "Saira", sans-serif; /* h1, h2, h3 ...*/
+  --font-sans-2: "Roboto", sans-serif; /* paragrafos...*/
+
+  /* Espacaçamentos */
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --gap: 1rem;
+  --card-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+  --width-container: 1400px;
+  --padding-top: 100px;
+  --padding-bottom: 100px;
+}
+
+
+
+  table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    td {
+      vertical-align: top;
+      padding: 15px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    td:first-child {
+      width: 60%;
+    }
+
+    td:last-child {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    strong {
+      color: #1a73e8;
+      font-size: 18px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      table,
+      tr,
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      td {
+        padding: 10px 0;
+      }
+
+      td:last-child {
+        text-align: left;
+      }
+    }

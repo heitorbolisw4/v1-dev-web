@@ -1,0 +1,534 @@
+@charset "UTF-8";
+
+/* Aqui estou inportando as fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Aqui estou definindo as variaveis que são padrões "Padrões" para mantermos uuma uniformidade dentre as quatro paginas */
+:root{
+
+    /* Paleta de cores */
+
+    --color-1: #2E38F2;         /* Azul Vibrante */
+    --color-2: #3037BF;         /* Azul Médio */
+    --color-3: #32408C;         /* Azul Profundo */
+    --color-4: #B4B9D9;         /* Cinza Azulado */
+    --color-5: #333640;         /* Cinza Escuro */
+    --color-6: #dadada;         /* Platnum "Color adc "*/
+
+    /* Tipografia */
+    --font-sans-1: 'Saira', sans-serif;       /* h1, h2, h3 ...*/
+    --font-sans-2: 'Roboto', sans-serif;      /* paragrafos...*/
+    
+
+
+    /* Espacaçamentos */
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --gap: 1rem;
+    --card-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+    --width-container: 1400px;
+    --padding-top: 100px;
+    --padding-bottom: 100px;
+
+
+
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--color-6);
+    font-family: "Saira", sans-serif;
+}
+.btn1{
+    padding: 20px;
+    font-size: 20px;
+    color: #dadada;
+    background-color: var(--color-2);
+    border: 1px solid #333640;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 3px 6px 14px rgba(0, 0, 0, 0.284);
+}
+.btn1:hover{
+    background-color: var(--color-6);
+    color: var(--color-3);
+    border-color: #2E38F2;
+    box-shadow: 1px 2px 3px black;
+}
+
+
+/* Header */
+
+main{
+    background-color: var(--color-6);
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    width: 1400px;
+    margin: auto;
+    gap: 100px;
+    
+}
+.logo-header{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+
+.logo-header img{
+    width: 80px;
+    height: auto;
+}
+
+#menu-hamburger{
+    display: none;
+}
+
+nav{
+    width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+    transform: none;
+    font-family: "Saira", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 45px;
+    
+}
+nav ul a{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--color-3);
+}
+
+nav ul li a:hover{
+    text-decoration: solid;
+    color: var(--color-6);
+    background-color:var(--color-3);
+    border-radius: 3px;
+}
+
+.logo-social{
+    display: flex;
+    width: 100px;
+    gap: var(--gap);
+    align-self: center;
+    justify-content: center;
+}
+.logo-social img{
+    width: 30px;
+    height: auto;
+    
+}
+
+/* Hero Section */
+
+.hero{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: var(--padding-bottom);
+    gap: var(--gap);
+    width: var(--width-container);
+    margin: auto;
+}
+.hero div{
+    width: 100%;
+}
+
+.img-hero img{
+    width: 700px;
+}
+
+.cta-hero{
+    display: flex;
+    flex-direction: column;
+    font-family: "Saira", sans-serif;
+    color: var(--color-3);
+    
+}
+
+h1{
+    font-size: 3.7em;
+}
+
+.cta-hero p {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+/* TimeLine Section */
+
+h3, h4, h5{
+    font-family: "Saira", sans-serif;
+    color: var(--color-3);
+}
+
+.timeline{
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #32408C;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+.timeline-item{
+    position: relative;
+    padding: 1em 2em;
+    width: 50%;
+}
+.timeline-item:nth-child(odd){
+    left: 0;
+}
+.timeline-item:nth-child(even){
+    left: 50%;
+}
+
+.timeline-content{
+    background: linear-gradient( to top left,  #dadada,#33364020);
+    position: relative;
+    border: 1px solid #32408C;
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: var(--card-shadow);
+
+}
+.timeline-content img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.8em;
+}
+.timeline-content p {
+    font-family: "Roboto", sans-serif;
+    color: #333640;
+    font-size: 17px;
+}
+.timeline-content ul{
+    display: flex;
+    flex-direction: column;
+}
+.timeline-content ul li{
+    list-style-type: none;
+}
+.timeline-content a {
+    text-decoration: none;
+    color: #32408C;
+}
+.timeline-content .reffs{
+    padding-top: 10px;
+    
+}
+
+.timeline-item::before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #333640;
+    z-index: 1;
+
+}
+
+.timeline-item:nth-child(odd)::before{
+    right: -10px;
+}
+.timeline-item:nth-child(even)::before{
+    left: -10px;
+}
+
+/* tabela dos SOs */
+.table{
+    width: 80%;
+    margin: 0 auto;
+}
+.so-title{
+    padding: 40px;
+    font-size: 1.5em;
+    text-align: center;
+    color:var(--color-3);
+}
+td{
+    color: var(--color-3);
+    border: 1px solid #2E38F2;
+    font-family: "Saira", sans-serif;
+    padding: 10px;
+}
+.table th{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-3);
+}
+td:hover{
+    background-color: var(--color-3);
+    color: var(--color-6);
+}
+/* Estilização do formulário*/
+.form-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+.form-section .container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 250px;
+    padding: 25px;
+    align-items: center;
+    color: var(--color-3);
+    background-color: var(--color-3);
+    margin: 0 auto;
+    border-radius: 3px;
+    box-shadow: 2px 2px 14px 1px rgba(2, 5, 10, 0.47);
+}
+.form-title{
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--color-3);
+    margin-bottom: 20px;
+}
+
+.form-step {
+    display: none;
+    text-align: center;
+    height: 50%;
+
+}
+.form-step.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 200px;
+    background-color: var(--color-6);
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 3px;
+}
+.form-step h3{
+    font-size: 26px;
+}
+.form-step p{
+    font-size: 19px;
+
+}
+#iname{
+    background-color: var(--color-3);
+    border: 1px solid var(--color-3);
+    border-radius: 3px;
+    color: var(--color-6);
+    width: 250px;
+    height: 40px;
+}
+#sobreTech{
+    background-color: var(--color-3);
+    border: 1px solid var(--color-3);
+    border-radius: 3px;    
+    color: var(--color-6);
+    width: 250px;
+    height: 40px;    
+}
+#iemail{
+    background-color: var(--color-3);
+    border: 1px solid var(--color-3);
+    border-radius: 3px;    
+    color: var(--color-6);
+    width: 250px;
+    height: 40px;        
+}
+.next-btn{
+    padding: 10px;
+    width: 100px;    
+    color: var(--color-6);
+    background-color: var(--color-3);
+    border: 1px solid var(--color-3);
+    border-radius: 3px;
+
+}
+.next-btn:hover{
+    color: var(--color-3);
+    background-color: var(--color-6);
+}
+
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: var(--color-3);
+    color: var(--color-6);
+    height: 50px;
+}
+/* media query */
+@media only screen and (min-width: 600px){
+
+}
+/* Celulares e telas menores */
+@media only screen and (max-width: 600px){
+    /* Menu */
+    .header{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .logo-header{
+        justify-content: flex-start;
+    }
+    nav{
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #dadadac6;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    nav.active{
+        display: block;
+        transform: translateX(0);
+        transition: all 0.3s;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #menu-hamburger{
+        display: block;
+        margin: auto;
+        cursor: pointer;
+        color: var(--color-6);
+        background-color: #32408C;
+        border-radius: 3px;
+    }
+    
+    
+    /* Hero */
+    .hero{
+        width: 100%;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+        
+    }
+    h1{
+        font-size: 2.3em;
+        
+    }
+    .hero p {
+        font-size: 2em;
+                
+    }
+    .hero-div{
+        width: 100vw;
+    }
+    .img-hero img{
+        width: 90vw;
+    }
+    .cta-hero{
+        width: 100%;
+    }
+    /* TimeLine */
+    .timeline::after{
+        left: 20px;
+    }
+    .timeline-item{
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 20px;
+        left: 0 !important;
+    }
+    .timeline-item::before, .timeline-item:nth-child(odd)::before, .timeline-item:nth-child(even)::before{
+        left: 10px;
+        right: auto;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 580px){
+    h1{
+        font-size: 2.4em;
+    }
+    .hero p {
+        font-size: 1.8em;
+                
+    }    
+}
+
+@media only screen and (max-width: 480px){
+    h1{
+        font-size: 2.3em;
+    }
+    .hero p {
+        font-size: 1.6em;
+                
+    }    
+}
+
+@media only screen and (max-width: 380px){
+    h1{
+        font-size: 1.9em;
+    }
+    .hero p {
+        font-size: 1.4em;
+                
+    }    
+}
+
+@media only screen and (max-width: 280px){
+    h1{
+        font-size: 1.5em;
+    }
+    .hero p {
+        font-size: 1.1em;
+                
+    }
+}

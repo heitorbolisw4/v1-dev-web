@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Realidade Virtual e Aumentada</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/ra-rv.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#vr">RV</a></li>
+        <li><a href="#ra">RA</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1 id="title"></h1>
+      <p class="subtitle">Realidade além da realidade</p>
+    </header>
+
+    <main>
+      <section id="intro" class="container">
+        <img
+          src="../assets/img/rarvimg/ra-rv.png"
+          alt="Comparação entre Realidade Virtual e Realidade Aumentada"
+        />
+        <p>
+          A Realidade Virtual (RV) e a Realidade Aumentada (RA) são tecnologias
+          imersivas com diferenças cruciais. A RV substitui o mundo real por um
+          ambiente digital completo (via headset), enquanto a RA sobrepõe
+          elementos digitais ao mundo físico (via smartphone/óculos AR). Cada
+          tecnologia possibilita experiências únicas em jogos, educação, saúde e
+          mais.
+        </p>
+      </section>
+
+      <section id="vr">
+        <h2>Realidade Virtual (RV)</h2>
+        <hr />
+        <p>
+          A RV (do inglês Virtual Reality) cria um mundo artificial digital
+          totalmente imersivo. Com o uso de headsets especiais, o usuário pode
+          olhar em volta e mover-se em qualquer direção num ambiente 3D gerado
+          por computador, permitindo experiências realistas.
+        </p>
+        <p>
+          O protótipo das lentes de RV foi o estereoscópio de 1837 (Charles
+          Wheatstone). O primeiro headset moderno foi o
+          <cite>Oculus Rift</cite> (2012), financiado via Kickstarter. O
+          Facebook (Meta) adquiriu a Oculus por US$2.3 bilhões, e desde então
+          várias empresas como Google, Sony e HTC desenvolveram seus próprios
+          dispositivos VR.
+        </p>
+
+        <h3>Aplicações da Realidade Virtual</h3>
+        <p>
+          A RV vai além de jogos e entretenimento, sendo usada em diversas
+          áreas:
+        </p>
+        <div class="rv">
+          <img
+            src="../assets/img/rarvimg/ra-na-medicina.png"
+            alt="Exemplo de Realidade Virtual na Medicina"
+          />
+          <ul>
+            <li>
+              Entretenimento: jogos imersivos (Meta Quest, PlayStation VR),
+              filmes 360° e atrações em parques temáticos.
+            </li>
+            <li>
+              Treinamento e Simulação: medicina, aviação e segurança usam RV
+              para práticas seguras de procedimentos complexos.
+            </li>
+            <li>
+              Educação: alunos exploram locais históricos ou o corpo humano em
+              3D, tornando o aprendizado interativo.
+            </li>
+            <li>
+              Arquitetura/Engenharia: protótipos virtuais de construções e
+              produtos são criados antes da obra, otimizando projetos.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="ra">
+        <h2>Realidade Aumentada (RA)</h2>
+        <hr />
+        <p>
+          A RA (do inglês Augmented Reality) integra elementos virtuais à visão
+          do mundo real via câmera e sensores de movimento. É popular em filtros
+          de redes sociais e jogos (como Pokémon GO). Em educação e indústria,
+          permite visualizar informações úteis sobre o ambiente real.
+        </p>
+        <p>
+          Marcos históricos: em 1962 Morton Heilig criou o Sensorama
+          multisensorial. Em 1968, Ivan Sutherland desenvolveu o primeiro
+          capacete HMD ( óculos simulação). Em 1992, Thomas Caudell (Boeing)
+          cunhou o termo "Realidade Aumentada" para descrever instruções
+          digitais sobrepostas durante montagens industriais.
+        </p>
+
+        <h3>Aplicações da Realidade Aumentada</h3>
+        <p>
+          A RA sobrepõe elementos digitais ao real, criando experiências
+          interativas. Exemplos de uso:
+        </p>
+        <div class="ra">
+          <img
+            src="../assets/img/rarvimg/rv-varejo.jpeg"
+            alt="Exemplo de Aplicação de Realidade Aumentada em Varejo"
+          />
+          <ul>
+            <li>
+              Entretenimento: jogos como Pokémon GO misturam mundo real com
+              elementos virtuais para experiências envolventes.
+            </li>
+            <li>
+              Varejo: apps permitem "testar" produtos virtualmente (ex. móveis
+              no ambiente do usuário, testes de maquiagem).
+            </li>
+            <li>
+              Indústria: instruções visuais passo-a-passo ajudam em montagem e
+              manutenção de equipamentos.
+            </li>
+            <li>
+              Conteúdo Virtual: modelos 3D ou vídeos são sobrepostos ao ambiente
+              real para enriquecer ensino e marketing.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="quiz">
+        <h2>Quiz: RV vs RA</h2>
+        <p>
+          Teste seus conhecimentos sobre Realidade Virtual e Aumentada. Clique
+          em "Iniciar" para começar.
+        </p>
+        <button id="startQuiz">Iniciar Quiz</button>
+        <div id="quizBox" style="display: none; text-align: center">
+          <p id="question"></p>
+          <div id="options"></div>
+          <p id="feedback"></p>
+          <button id="nextBtn" style="display: none">Próxima pergunta</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="../scrips/ra-rv.js"></script>
+  </body>
+</html>
